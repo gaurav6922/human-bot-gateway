@@ -38,7 +38,7 @@ function App() {
       });
 
       if (isHuman) {
-        window.location.href = 'https://www.wikipedia.com';//real
+        window.location.href = 'https://nihonyoga.org/';//real
       } else {
         window.location.href = 'https://frabjous-sprite-edea9e.netlify.app/';//honeypot
       }
