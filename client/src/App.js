@@ -27,7 +27,7 @@ function App() {
         interaction.moved || interaction.clicked || interaction.typed || interaction.scrolled;
 
       // Log and redirect
-      fetch('http://localhost:5001/api/log', {
+      fetch('https://human-bot-gateway-backend.onrender.com/api/log',  {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
