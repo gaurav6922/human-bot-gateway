@@ -38,9 +38,9 @@ function App() {
       });
 
       if (isHuman) {
-        window.location.href = 'https://nihonyoga.org/';//real
+        window.location.href = '';//Enter the link you want humans to access
       } else {
-        window.location.href = 'https://frabjous-sprite-edea9e.netlify.app/';//honeypot
+        window.location.href = '';//Enter the link to rerout bots
       }
     }, waitTime);
 
