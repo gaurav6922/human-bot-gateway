@@ -36,14 +36,18 @@ function App() {
           userAgent: navigator.userAgent,
         }),
       });
-
-      if (isHuman) {
-        window.location.href = '';//Enter the link you want humans to access
-      } else {
-        window.location.href = '';//Enter the link to rerout bots
-      }
-    }, waitTime);
-
+/////
+      setTimeout(() => {
+  if (isHuman) {
+    alert("✅ Verified! You are human.");
+    // window.location.href = ''; // Enter the link you want humans to access (optional)
+  } else {
+    alert("⚠️ Bot detected.");
+    // window.location.href = ''; // Enter the link to reroute bots (optional)
+  }
+}, waitTime);
+    
+////    
     return () => clearTimeout(timer);
   }, []);
 
