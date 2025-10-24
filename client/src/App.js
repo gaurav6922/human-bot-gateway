@@ -26,8 +26,8 @@ function App() {
       const isHuman =
         interaction.moved || interaction.clicked || interaction.typed || interaction.scrolled;
 
-      // Log and redirect
-      fetch('https://human-bot-gateway-backend.onrender.com/api/log',  {
+      // Log activity
+      fetch('https://human-bot-gateway-backend.onrender.com/api/log', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -36,18 +36,17 @@ function App() {
           userAgent: navigator.userAgent,
         }),
       });
-/////
-      setTimeout(() => {
-  if (isHuman) {
-    alert("✅ Verified! You are human.");
-    // window.location.href = ''; // Enter the link you want humans to access (optional)
-  } else {
-    alert("⚠️ Bot detected.");
-    // window.location.href = ''; // Enter the link to reroute bots (optional)
-  }
-}, waitTime);
-    
-////    
+
+      // ✅ Display result after verification
+      if (isHuman) {
+        alert("✅ Verified! You are human.");
+        // window.location.href = ''; // Optional redirect for humans
+      } else {
+        alert("⚠️ Bot detected.");
+        // window.location.href = ''; // Optional redirect for bots
+      }
+    }, waitTime);
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -60,4 +59,3 @@ function App() {
 }
 
 export default App;
-
