@@ -37,7 +37,7 @@ function App() {
         }),
       });
 
-      // ✅ Display result after verification
+      
       if (isHuman) {
         alert("✅ Verified! You are human.");
         // window.location.href = ''; // Optional redirect for humans
